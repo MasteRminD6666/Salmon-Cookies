@@ -3,3 +3,21 @@ li{
     font-size: medium;
     font-family: Arial, sans-serif;
 }
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+ th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding-top: 20px;
+    font-size: 22px;
+}
