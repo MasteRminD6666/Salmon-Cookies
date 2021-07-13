@@ -365,7 +365,7 @@ for (let i = 0; i < stores.length; i++) {
     stores[i].render();
 }
 
-// for creating Table head
+// for creating Table data
 function createTd(text) {
     const td = document.createElement('td');
     td.append(document.createTextNode(text));
