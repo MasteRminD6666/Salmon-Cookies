@@ -389,7 +389,7 @@ Stores.getTotalOfAllStores = function() {
         }
         allTotal += total;
         row.append(createTd(total));
-    }0
+    }
     row.append(createTd(allTotal));
 
     const table = document.getElementById('stores');
