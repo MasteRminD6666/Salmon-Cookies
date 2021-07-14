@@ -397,3 +397,15 @@ Stores.getTotalOfAllStores = function() {
 }
 
 Stores.getTotalOfAllStores();
+
+
+
+
+// button using this as we learend so far 
+function limClick(){
+   let s =  document.getElementsByClassName("Seattle")
+   s.innerHTML = "This is a paragraph.";
+
+    console.log("hello")
+  }
+
