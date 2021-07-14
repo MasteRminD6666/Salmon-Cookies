@@ -304,6 +304,7 @@ Stores.prototype.avgCookies = function () {
             }
             
 }
+let table = document.getElementById('stores');
 
 Stores.prototype.render= function(){
     this.avgCookies();
@@ -331,6 +332,7 @@ Stores.prototype.render= function(){
   //  console.log('this is the total ',this.total)
 }
 
+// for the table Header
 
 Stores.prototype.tableHeader = function () {
     let table = document.getElementById('stores');
@@ -359,6 +361,36 @@ let paris = new Stores('paris',20,38,2.3);
 let lima = new Stores('lima',2,16,4.6);
 
 
+// getting tags from the form 
+
+let form = document.getElementById("form");
+
+//Callback function i read about it   
+
+form.addEventListener('submit',function submit(event) {
+ event.preventDefault();
+ let name = event.target.storeName.value
+ let min = event.target.min.value
+ let max = event.target.max.value
+ let avg = event.target.avg.value
+
+ let user = new Stores(name,min,max,avg);
+ table.textContent = '';
+ seattle.tableHeader()
+ for (let i = 0; i < stores.length; i++) {
+    
+    stores[i].render();
+}
+
+
+Stores.getTotalOfAllStores();
+
+ 
+})
+
+
+
+
 seattle.tableHeader()
 
 for (let i = 0; i < stores.length; i++) {
@@ -372,7 +404,7 @@ function createTd(text) {
 
     return td;
 }
-
+const row = document.createElement('tr');
 Stores.getTotalOfAllStores = function() {
     
     const row = document.createElement('tr');
@@ -397,15 +429,3 @@ Stores.getTotalOfAllStores = function() {
 }
 
 Stores.getTotalOfAllStores();
-
-
-
-
-// button using this as we learend so far 
-function limClick(){
-   let s =  document.getElementsByClassName("Seattle")
-   s.innerHTML = "This is a paragraph.";
-
-    console.log("hello")
-  }
-
