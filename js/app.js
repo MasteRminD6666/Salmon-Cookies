@@ -429,3 +429,4 @@ Stores.getTotalOfAllStores = function() {
 }
 
 Stores.getTotalOfAllStores();
+

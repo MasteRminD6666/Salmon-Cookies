@@ -24,5 +24,18 @@ function limClick(){
     }
    }
  
+let input2 = document.getElementById("input2");
 
- 
+//Callback function i read about it   
+// TODO  take the sumbtion value form the from 
+// TODO  Edit the locations 
+// TODO  Edit the style more   
+input2.addEventListener('on',function submit(event) {
+    
+ event.preventDefault();
+ let name = event.target.name.value
+ let email = event.target.email.value
+ let textarea = event.target.textarea.value
+ console.log(name);
+
+})
