@@ -290,7 +290,7 @@ svg {
 
 
 .footer{
-    background-color: #131313;
+ 
     margin-top: 300px;
     left: 0;
     bottom: 0;
@@ -342,8 +342,14 @@ svg {
     line-height: 150%;
     resize:vertical;
   }
-  .pad{
-      padding-bottom: 30px;
+.pad{
+      margin-bottom: 80px;
+      color: whitesmoke;
+      font-family: 'Trocchi', serif; 
+      font-size: 45px; font-weight: normal; 
+      line-height: 48px; 
+   
+
   }
   [type="submit"] {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
