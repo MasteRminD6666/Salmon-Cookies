@@ -371,28 +371,7 @@ let form = document.getElementById("form");
 
 //Callback function i read about it   
 
-form.addEventListener('submit',function submit(event) {
- event.preventDefault();
- let name = event.target.storeName.value
- let min = event.target.min.value
- let max = event.target.max.value
- let avg = event.target.avg.value
 
- let user = new Stores(name,min,max,avg);
- 
- table.textContent = '';
- seattle.tableHeader()
- for (let i = 0; i < stores.length; i++) {
-    
-    stores[i].render();
-   
-}
-
-
-Stores.getTotalOfAllStores();
-
- 
-})
 
 
 
@@ -436,4 +415,26 @@ Stores.getTotalOfAllStores = function() {
 }
 
 Stores.getTotalOfAllStores();
+form.addEventListener('submit',function submit(event) {
+    event.preventDefault();
+    let name = event.target.storeName.value
+    let min = event.target.min.value
+    let max = event.target.max.value
+    let avg = event.target.avg.value
+   
+    let user = new Stores(name,min,max,avg);
+    
+    table.textContent = '';
+    seattle.tableHeader()
+    for (let i = 0; i < stores.length; i++) {
+       
+       stores[i].render();
+      
+   }
+   
+   
+   Stores.getTotalOfAllStores();
+   
+    
+   })
 
