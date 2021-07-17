@@ -17,36 +17,31 @@
         <li><a href="sales.html">Sales</a></li>
         <li><a href="#contact">Contact</a></li>
         
+        
     </ul>
 </nav>
+<div class="continer">
+<div class="images-selector" id = "hours">
+  
+  <label for="chinook" class="img-card img1"></label>
+  <label for="cutter" class="img-card img2"></label>
+  <label for="family" class="img-card img3"></label>
+  <label for="fish" class="img-card img4"></label>
+  <label for="forsted-cookie" class="img-card img5"></label>
+  <label for="shirt" class="img-card img6"></label>
+</div>
+</div>
 
-
-    <div class="continer">
-        <div><img src="img/chinook.jpg"></div>
-        <div><img src="img/cutter.jpeg"></div>
-        <div><img src="img/family.jpg"></div>
-        <div><img src="img/fish.jpg"></div>
-        <div><img src="img/frosted-cookie.jpg"></div>
-        
-        <div><img src="img/shirt.jpg"></div>
-        
-        
-        
-        
-       
-      
-        
-    </div>
 
     <section id="locations">
         <div class="container2">
             <div class="center">
-              <button class="btn">
+              <button class="btn" id = 'seattleBtn' onclick="seattleClick()" this.onclick= null;>
                 <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                   <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                   <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
                 </svg>
-                <span>Seattle</span>
+                <span id = "seattle">Seattle</span>
                 
                 
               </button>
@@ -54,43 +49,43 @@
           </div>
           <div class="container3">
             <div class="center">
-              <button class="btn">
+              <button class="btn" id='tokyoBtn' onclick="tokyoClick()" this.onclick= null;>
                 <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                   <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                   <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
                 </svg>
-                <span>Tokyo</span>
+                <span id ="tokyo">Tokyo</span>
                 
               </button>
             </div>
           </div>
           <div class="container4">
             <div class="center">
-              <button class="btn">
+              <button class="btn" id='dubaiBtn' onclick="dubaiClick()" this.onclick = null;>
                 <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                   <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                   <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
                 </svg>
-                <span>Dubai</span>
+                <span id="dubai">Dubai</span>
                 
               </button>
             </div>
           </div>
           <div class="container5">
             <div class="center">
-              <button class="btn">
+              <button class="btn" id='parisBtn' onclick="parisClick()" this.onclick=null;>
                 <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                   <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                   <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
                 </svg>
-                <span>Paris</span>
+                <span id = "paris" >Paris</span>
                 
               </button>
             </div>
           </div>
           <div class="container6">
             <div class="center">
-              <button id = 'bt' class="btn" onclick="limClick()">
+              <button id = 'bt' class="btn" onclick="limClick()"this.onclick=null;>
                 <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                   <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                   <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
@@ -106,31 +101,19 @@
     
        
     </section>
-    <section>
-        <div>
-            <h1 class="Seattle" id = " change">23</h1>
-        </div>
-        <div class="Tokyo">
-            <h1>hello</h1>
-        </div>
-        <div class="Dubai">
-            <h1>hello</h1>
-        </div>
-        <div class="Paris">
-            <h1>hello</h1>
-        </div>
-        <div class="lima">
-            <h1>hello</h1>
-        </div>
+    <section >
+      <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content"></div>
+
+</div>
     </section>
-   
-
-
    
 </body>
 
 <!--horus not added yet trying my best to make pro-->
-<div id ="hours"></div>
+
 <!--footer not added yet trying my best to make pro-->
 <div class="footer" id= "contact">
     <h1 class="pad">Contact us </h1>
@@ -140,30 +123,7 @@
       <textarea name="text"  id ="textarea" class="feedback-input" placeholder="Comment"></textarea>
       <input id ="input2" type="submit" value="SUBMIT"/>
     </form>
-    <!-- <div>
-      <form action="">
 
-        <label for="fname" class="try2">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-    
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-    
-        <label for="country">Country</label>
-        <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-        </select>
-      
-        <input id = "submit" type="submit" value="Submit">
-      </form>
-    </div> -->
-    <!-- <div class="contact">
-      <form>
-
-      </form>
-    </div> -->
 
 </html>
 

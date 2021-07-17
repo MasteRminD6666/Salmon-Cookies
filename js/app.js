@@ -306,8 +306,11 @@ Stores.prototype.avgCookies = function () {
 }
 let table = document.getElementById('stores');
 
+
 Stores.prototype.render= function(){
+  
     this.avgCookies();
+  
  
     let table = document.getElementById('stores');
     
@@ -330,6 +333,7 @@ Stores.prototype.render= function(){
     tableRow.append(tableData);
     table.append(tableRow)
   //  console.log('this is the total ',this.total)
+  
 }
 
 // for the table Header
@@ -375,11 +379,13 @@ form.addEventListener('submit',function submit(event) {
  let avg = event.target.avg.value
 
  let user = new Stores(name,min,max,avg);
+ 
  table.textContent = '';
  seattle.tableHeader()
  for (let i = 0; i < stores.length; i++) {
     
     stores[i].render();
+   
 }
 
 
@@ -387,6 +393,7 @@ Stores.getTotalOfAllStores();
 
  
 })
+
 
 
 
