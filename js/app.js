@@ -103,10 +103,10 @@ let form = document.getElementById("form");
 
  
 
-seattle.tableHeader()
+// seattle.tableHeader()
 
- for (let i = 0; i < stores.length; i++) {
-            stores[i].render();}
+//  for (let i = 0; i < stores.length; i++) {
+//             stores[i].render();}
 
 
 // for creating Table data
@@ -140,7 +140,7 @@ Stores.getTotalOfAllStores = function() {
     table.append(row);
 }
 
-Stores.getTotalOfAllStores();
+
 //Callback function i read about it  
 form.addEventListener('submit',function submit(event) {
     event.preventDefault();
@@ -162,9 +162,10 @@ form.addEventListener('submit',function submit(event) {
        
       
    }
-   
-   
    Stores.getTotalOfAllStores();
+   
+   
+//    Stores.getTotalOfAllStores();
    
     
    })
