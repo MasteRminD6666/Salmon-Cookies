@@ -36,7 +36,29 @@ Stores.prototype.avgCookies = function () {
 }
 let table = document.getElementById('stores');
 
+// for the table Header
+Stores.prototype.tableHeader = function () {
+    let table = document.getElementById('stores');
+    let tableRow = document.createElement('tr');
+    let tableHead = document.createElement('th');
+    
+    tableHead.textContent = 'Location';
+    tableRow.append(tableHead);
+    for (let i = 0; i < hours.length; i++) {
+        let tableData  = document.createElement('td');
+        tableData.textContent = hours[i];
+        tableRow.append(tableData);
+    }
+    let tableData  = document.createElement('td');
+    table.append(tableRow);
+    tableData = document.createElement('td');
+    tableData.textContent = 'Daily Location Total:';
+    tableRow.append(tableData);
+    }
 
+    let tableRow = document.createElement('tr');
+    let tableHeading = document.createElement('th');
+    let tableData= document.createElement('td');
 Stores.prototype.render= function(){
   
     this.avgCookies();
@@ -58,6 +80,7 @@ Stores.prototype.render= function(){
         tableRow.append(tableData)
         
     }
+    let tableData  = document.createElement('td');
     tableData= document.createElement('td');
     tableData.textContent = this.total;
     tableRow.append(tableData);
@@ -65,26 +88,6 @@ Stores.prototype.render= function(){
   //  console.log('this is the total ',this.total)
   
 }
-
-// for the table Header
-
-Stores.prototype.tableHeader = function () {
-    let table = document.getElementById('stores');
-    let tableRow = document.createElement('tr');
-    let tableHead = document.createElement('th');
-    tableHead.textContent = 'Location';
-    tableRow.append(tableHead);
-    for (let i = 0; i < hours.length; i++) {
-        let tableData  = document.createElement('td');
-        tableData.textContent = hours[i];
-        tableRow.append(tableData);
-    }
-    table.append(tableRow);
-    tableData = document.createElement('td');
-    tableData.textContent = 'Daily Location Total:';
-    tableRow.append(tableData);
-    }
-
 
  let stores=[];
 
@@ -99,13 +102,7 @@ let lima = new Stores('lima',2,16,4.6);
 
 let form = document.getElementById("form");
 
-//Callback function i read about it   
-
-
-
-
-
-
+ 
 
 seattle.tableHeader()
 
@@ -145,6 +142,7 @@ Stores.getTotalOfAllStores = function() {
 }
 
 Stores.getTotalOfAllStores();
+//Callback function i read about it  
 form.addEventListener('submit',function submit(event) {
     event.preventDefault();
     let name = event.target.storeName.value
@@ -153,8 +151,10 @@ form.addEventListener('submit',function submit(event) {
     let avg = event.target.avg.value
    
     let user = new Stores(name,min,max,avg);
-    
+    tableRow.textContent= '';
     table.textContent = '';
+    tableHeading.textContent= '';
+    tableData.textContent= '';
     seattle.tableHeader()
     for (let i = 0; i < stores.length; i++) {
        
@@ -167,4 +167,5 @@ form.addEventListener('submit',function submit(event) {
    
     
    })
+
 
