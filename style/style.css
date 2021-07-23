@@ -13,6 +13,7 @@ body{
     overflow-x: hidden;
 }
 
+
 ul{
     margin-left: 0;
     list-style-type: none;
@@ -43,7 +44,6 @@ li a:hover{
     background-color: #131313;
     color: #3272d9;
 }
-
 
 table {
     font-family: arial, sans-serif;
@@ -120,8 +120,7 @@ th:hover{
   
   .img-card:hover {
     filter: grayscale(0) opacity(1);
-  /*   box-shadow:  0px 8px 4px rgba(0, 0, 0, 0.3),
-                 0px 10px 2px rgba(0, 0, 0, 0.1); */
+  
   }
   
   .img-card::before,
@@ -418,3 +417,239 @@ svg {
       transform:translateX(25%);
     }
   }
+
+
+  /* Location table style  */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  
+  .locationTable {
+    border-collapse: collapse;
+    box-shadow: 0 5px 10px #e1e5ee;
+    background-color: whitesmoke;
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 200px;
+  }
+    .thead {
+      box-shadow: 0 5px 10px #e1e5ee;
+    }
+  
+    .th {
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-size: 0.7rem;
+      font-weight: 900;
+      color: #131313;
+      
+    }
+  
+    .td {
+      padding: 1rem 2rem;
+      color: #131313;
+      font-size: 14px;
+    }
+  
+    .tabletext {
+      text-decoration: none;
+      color:#2962ff;
+      
+    }
+  
+    .status {
+      border-radius:  0.2rem;
+      background-color: red;
+      padding: 0.2rem 1rem;
+      text-align: center;
+  }
+     .status-closed {
+        background-color: #fff0c2;
+        color: #cc3a0d;
+      }
+  
+       .status-open {
+        background-color: #c8e6c9;
+        color:  #388e3c;
+      }
+  
+        .status-unpaid {
+        background-color: #ffcdd2;
+        color: #c62828;
+      }
+    
+  
+    .amount {
+      text-align: right;
+    }
+  
+   
+    .tr:nth-child(even) {
+      background-color: #f4f6fb;
+    }
+   
+/* Background fish style from codepen with editing  */
+svg#fish {
+  top: 5em;
+}
+/* Fish Animation */
+svg.fish{
+  overflow:visible;
+}
+
+@-webkit-keyframes swim
+{
+	0% {margin-left: -235px}
+	90% {margin-left: 100%;}
+	100% {margin-left: 100%;}
+}
+
+@keyframes swim
+{
+	0% {margin-left: -235px}
+	70% {margin-left: 100%;}
+	100% {margin-left: 100%;}
+}
+
+.fish{
+	width: 300px;
+	height: 104px;
+	margin-left: -235px;
+	position: absolute;	
+	animation: swim 20s;
+	-webkit-animation: swim 20s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	-webkit-animation-timing-function: linear;
+  z-index: -1;
+}
+
+svg #fish1,
+svg #fish2,
+svg #fish3,
+svg #fish4,
+svg #fish5,
+svg #fish6 {
+fill:#528484;
+  
+    -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+svg #fish2{
+	animation-delay: 0.5s;
+	-webkit-animation-delay: 0.5s;
+}
+
+svg #fish3{
+	animation-delay: 0.2s;
+	-webkit-animation-delay: 0.2s;
+}
+
+svg #fish4{
+	animation-delay: 0.4s;
+	-webkit-animation-delay: 0.4s;
+}
+
+svg #fish5{
+	animation-delay: 0.1s;
+	-webkit-animation-delay: 0.1s;
+}
+
+svg #fish6{
+	animation-delay: 0.3s;
+	-webkit-animation-delay: 0.3s;
+}
+
+/**/
+@-moz-keyframes bounce {
+  0%, 50%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -moz-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  75% {
+    -moz-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 50%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  75% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+@keyframes bounce {
+  0%, 50%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  75% {
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+
+
+/* water anamtion From Codepen */
+
+  #water {
+    
+  margin-bottom: 575px;
+  background-image: url("https://priteshgupta.com/demos/fill/waves.png");
+  background-position: top right;
+  position: absolute;
+  bottom: 0px;
+  width: 180px;
+  height: 3em;
+  -webkit-transition: all 3s ease-out;
+  -moz-transition: all 3s ease-out;
+  -o-transition: all 3s ease-out;
+  transition: all 3s ease-out;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  
+  }
+  #water:hover  {
+  height: 6em;
+  background-position: top left;
+  -webkit-transition: all 3s ease-out;
+  -moz-transition: all 3s ease-out;
+  -o-transition: all 3s ease-out;
+  transition: all 3s ease-out;
+  }
+
+  
