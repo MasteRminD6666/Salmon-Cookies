@@ -57,7 +57,6 @@ Stores.prototype.tableHeader = function () {
     }
 
     let tableRow = document.createElement('tr');
-    let tableHeading = document.createElement('th');
     let tableData= document.createElement('td');
 Stores.prototype.render= function(){
   
@@ -106,9 +105,9 @@ let form = document.getElementById("form");
 
 seattle.tableHeader()
 
-for (let i = 0; i < stores.length; i++) {
-    stores[i].render();
-}
+ for (let i = 0; i < stores.length; i++) {
+            stores[i].render();}
+
 
 // for creating Table data
 function createTd(text) {
@@ -149,16 +148,18 @@ form.addEventListener('submit',function submit(event) {
     let min = event.target.min.value
     let max = event.target.max.value
     let avg = event.target.avg.value
-   
+    seattle.tableHeader()
     let user = new Stores(name,min,max,avg);
+   
+    
     tableRow.textContent= '';
     table.textContent = '';
-    tableHeading.textContent= '';
     tableData.textContent= '';
     seattle.tableHeader()
     for (let i = 0; i < stores.length; i++) {
        
        stores[i].render();
+       
       
    }
    
