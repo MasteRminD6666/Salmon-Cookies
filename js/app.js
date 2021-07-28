@@ -28,6 +28,7 @@ function Stores(name, min, max, avg) {
   this.cookiespPurchased = [];
 
   stores.push(this);
+  this.avgCookies();
 }
 
 Stores.prototype.getRandomCustomers = function (min, max) {
@@ -72,9 +73,12 @@ Stores.prototype.tableHeader = function () {
 
 let tableRow = document.createElement("tr");
 let tableData = document.createElement("td");
+let tableHeading = document.createElement("th");
+console.log(tableData);
 Stores.prototype.render = function () {
-  this.avgCookies();
+  // F
 
+  let tableData = document.createElement("td");
   let table = document.getElementById("stores");
 
   let tableRow = document.createElement("tr");
@@ -83,18 +87,22 @@ Stores.prototype.render = function () {
   tableRow.append(tableHeading);
 
   tableHeading.textContent = this.name;
+  let insideData = document.createElement("td");
 
   for (let i = 0; i < this.cookiespPurchased.length; i++) {
-    let tableData = document.createElement("td");
-    tableData.textContent = this.cookiespPurchased[i];
+    insideData = document.createElement("td");
 
-    tableRow.append(tableData);
+    insideData.textContent = this.cookiespPurchased[i];
+
+    tableRow.append(insideData);
   }
-  let tableData = document.createElement("td");
-  tableData = document.createElement("td");
+
+  console.log(insideData);
+
   tableData.textContent = this.total;
-  tableRow.append(tableData);
   table.append(tableRow);
+  tableRow.append(tableData);
+
   //  console.log('this is the total ',this.total)
 };
 
@@ -110,10 +118,12 @@ let lima = new Stores("lima", 2, 16, 4.6);
 
 let form = document.getElementById("form");
 
-// seattle.tableHeader()
-
-//  for (let i = 0; i < stores.length; i++) {
-//             stores[i].render();}
+// seattle.     ()
+seattle.tableHeader();
+for (let i = 0; i < stores.length; i++) {
+  
+  stores[i].render();
+}
 
 // for creating Table data
 function createTd(text) {
@@ -122,6 +132,7 @@ function createTd(text) {
 
   return td;
 }
+
 const row = document.createElement("tr");
 Stores.getTotalOfAllStores = function () {
   const row = document.createElement("tr");
@@ -146,24 +157,32 @@ Stores.getTotalOfAllStores = function () {
 };
 
 //Callback function i read about it
+console.log("before", table);
 form.addEventListener("submit", function submit(event) {
+  let table = document.getElementById("stores");
+  table.innerHTML = "";
   event.preventDefault();
   let name = event.target.storeName.value;
   let min = event.target.min.value;
   let max = event.target.max.value;
   let avg = event.target.avg.value;
-  seattle.tableHeader();
+  // seattle.tableHeader();
   let user = new Stores(name, min, max, avg);
 
-  tableRow.textContent = "";
+  console.log("after", table);
+  tableHeading.textContent = "";
   table.textContent = "";
-  tableData.textContent = "";
   seattle.tableHeader();
+  console.log("after while", table);
+  // seattle.tableHeader();
   for (let i = 0; i < stores.length; i++) {
+  
     stores[i].render();
   }
-  Stores.getTotalOfAllStores();
 
-  //    Stores.getTotalOfAllStores();
+  Stores.getTotalOfAllStores();
 });
-// TODO check the rending function 
+Stores.getTotalOfAllStores();
+
+
+// TODO check the rending function
